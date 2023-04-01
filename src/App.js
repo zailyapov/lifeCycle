@@ -1,4 +1,7 @@
 import React from "react";
+
+// пример 1
+
 class MyComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -29,4 +32,24 @@ class MyComponent extends React.Component {
   }
 }
 
-export default MyComponent
+// пример 2
+
+class cycle extends React.Component {
+  constructor(props) {
+    super(props);
+    console.log("constructor");
+  }
+
+  componentDidMount() {
+    console.log("componentDidMount");
+  }
+
+  render() {
+    console.log("render");
+    return <div>Привет, мир!</div>;
+  }
+}
+
+
+
+export default cycle
